@@ -5,9 +5,13 @@ from sqlalchemy import create_engine, Column, String, Integer, Sequence
 from sqlalchemy.ext.declarative import declarative_base
 from fastapi.staticfiles import StaticFiles
 from sqlalchemy.orm import sessionmaker
+import os
+
+# Caminho para o diretório raiz do projeto
+base_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Configuração do SQLite
-DATABASE_URL = "sqlite:///./test.db"
+DATABASE_URL = f"sqlite:///{base_dir}/test.db"
 Base = declarative_base()
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
@@ -23,10 +27,9 @@ class User(Base):
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory=f"{base_dir}/templates")
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
-
+app.mount("/static", StaticFiles(directory=f"{base_dir}/static"), name="static")
 
 @app.get("/login", response_class=HTMLResponse)
 async def login_form(request: Request):
