@@ -10,8 +10,6 @@ itsdangerous
 Jinja2
 Mako
 MarkupSafe
-psycopg2-binar
-pydantic
+psycopg2-binary
 SQLAlchemy
 Starlette
-async-timeout
