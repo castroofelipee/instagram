@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  width: 350px;
+  border: 1px solid rgb(195, 195, 195);
+  border-radius: 3px;
+  padding: 20px;
+  text-align: center;
+}
+
+.center .header {
+  margin-bottom: 20px;
+}
+
+.inputElement {
+  margin: 20px 0;
+}
+
+.inputElement form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputElement input {
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 14px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+}
+
+.inputElement input:focus {
+  outline: none;
+  border: 1px solid #3897f0;
+}
+
+.inputButton {
+  background-color: #3897f0;
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.line .arrow {
+  flex: 1;
+  height: 1px;
+  background-color: rgb(195, 195, 195);
+  margin: 0 10px;
+}
+
+.line .content {
+  margin: 0 10px;
+}
+
+.social__icon {
+  margin: 10px 0;
+  color: #385185;
+}
+
+.social__icon i {
+  padding: 5px;
+}
+
+.social__icon span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.forgetPassword {
+  color: #385185;
+  margin-top: 10px;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+}
+
+.footer span {
+  color: #003366;
+  font-weight: 600;
+}
